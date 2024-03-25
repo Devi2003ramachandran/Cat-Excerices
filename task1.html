@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <title></title>
+    </head>
+    <style>
+        body{
+            background-color: black;
+        }
+        .container{
+            margin-top: 100px;     
+        }
+        img{
+           margin-left: 500px;
+        }
+        span{
+            color: black;
+            margin: 10px;
+        }
+        /* .six{
+            margin-left: 500px;
+        }
+        .seven{
+            margin-left: 500px;
+        } */
+        .card{
+            background-color: gray;
+            margin-left: 500px;
+            width: 200px;
+            height: 100px;
+        }
+        button{
+            margin: 20px;
+        }
+    </style>
+    <body>
+        <div class="container">
+            <div>
+                <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/bulb-go-off-img.png" id="three" width="200px " height="200px" alt="">
+            </div>
+            <div>
+                <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/cat-eyes-img.png" id="four" width="200px " height="200px" alt="">
+            </div>
+            <div class="card">
+                <div><span id="five">switch</span></div>
+                    <button id="six" onclick="on()">OFF</button>
+                     <button id="seven" onclick="off()">ON</button>
+
+            </div>
+        </div>
+        <script>
+            function off(){
+              document.getElementById("three").src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/bulb-go-on-img.png"
+              document.getElementById("four").src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/cat-img.png"
+                document.getElementById("five").innerHTML="switched off"
+                document.getElementById("six").style.background="grey"
+                document.getElementById("seven").style.background="green"
+            }
+            function on(){
+                document.getElementById("three").src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/bulb-go-off-img.png"
+                document.getElementById("four").src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/cat-eyes-img.png"
+                document.getElementById("five").innerHTML="switched on"
+                document.getElementById("six").style.background="red"
+                document.getElementById("seven").style.background="grey"
+            
+            } 
+        </script>
+    </body>
+</html>
